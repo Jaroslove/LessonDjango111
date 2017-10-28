@@ -1,7 +1,24 @@
+from django.db.models import Q
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import TemplateView, ListView
 from .models import Restorant
+
+
+class SearchRestoranListView(ListView):
+    template_name = 'restoran/home.html'
+
+    def get_queryset(self):
+        # print(self.kwargs)
+        slug = self.kwargs.get('slug')
+        print(slug)
+        if slug:
+            return Restorant.objects.filter(
+                Q(location__iexact=slug) |
+                Q(location__contains=slug)
+            )
+        else:
+            return Restorant.objects.all()
 
 
 class RestoranListView(ListView):
