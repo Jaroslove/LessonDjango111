@@ -1,0 +1,11 @@
+{% extends 'restoran/base.html' %}
+{% block main %}
+    <h5>Hello from base</h5>
+    {% for item in object_list %}
+        <ul>
+            <il>
+                {{ item.location }}
+            </il>
+        </ul>
+    {% endfor %}
+{% endblock %}
