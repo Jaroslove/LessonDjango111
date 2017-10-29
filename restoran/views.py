@@ -1,8 +1,23 @@
 from django.db.models import Q
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import View
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from .models import Restorant
+
+
+class DetailRestoranListView(DetailView):
+    queryset = Restorant.objects.all()
+
+    def get_context_data(self, *args, **kwargs):
+        print(self.kwargs)
+        context = super(DetailRestoranListView, self).get_context_data(*args, **kwargs)
+        print(context)
+        return context
+
+    def get_object(self, *args, **kwargs):
+        rest_id = self.kwargs.get('rest_id')
+        obj = get_object_or_404(Restorant, id=rest_id)
+        return obj
 
 
 class SearchRestoranListView(ListView):
