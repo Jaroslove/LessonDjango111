@@ -4,6 +4,7 @@
     {% for item in object_list %}
         <ul>
             <il>
+                <a href="/restoran/{{ item.slug }}/">{{ item.slug }}</a></br>
                 {{ item.location }} </br>
                 {{ item.update }}
             </il>

@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^restoran/$', views.RestoranListView.as_view()),
     # url(r'^restoran/(?P<slug>\w+)$', views.SearchRestoranListView.as_view()),
     # url(r'^restoran/(?P<pk>\w+)$', views.DetailRestoranListView.as_view()),
-    url(r'^restoran/(?P<rest_id>\w+)$', views.DetailRestoranListView.as_view()),  # use rest_id instead pk
+    url(r'^restoran/(?P<slug>[\w-]+)/$', views.DetailRestoranListView.as_view()),  # use rest_id instead pk
     # url(r'^restoran/spb/$', views.SRestoranlist.as_view()),
     # url(r'^restoran/moscow/$', views.MRestoranlist.as_view()),
     # url(r'^home/', views.restorant_listview),
