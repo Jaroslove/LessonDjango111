@@ -1,0 +1,11 @@
+{% extends 'restoran/base.html' %}
+{% block main %}
+    <h5>Form</h5>
+    <form method="post">{% csrf_token %}
+        <input type="text" name="title" placeholder="put your name here"><br/>
+        <input type="text" name="location" placeholder="put your location"><br/>
+        <input type="text" name="category" placeholder="put your category"><br/>
+        <button type="submit">Save me</button>
+    </form>
+
+{% endblock %}
