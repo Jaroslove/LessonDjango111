@@ -2,9 +2,10 @@
 {% block main %}
     <h5>Form</h5>
     <form method="post">{% csrf_token %}
-        <input type="text" name="name" placeholder="put your name here"><br/>
-        <input type="text" name="location" placeholder="put your location"><br/>
-        <input type="text" name="category" placeholder="put your category"><br/>
+{#        <input type="text" name="name" placeholder="put your name here"><br/>#}
+{#        <input type="text" name="location" placeholder="put your location"><br/>#}
+{#        <input type="text" name="category" placeholder="put your category"><br/>#}
+        {{ form.as_p }}
         <button type="submit">Save me</button>
     </form>
 

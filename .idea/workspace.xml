@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restoran/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="20" />
+            <state relative-caret-position="162">
+              <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -72,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/restoran/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="126">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -107,8 +107,8 @@
         <option value="$PROJECT_DIR$/restoran/forms.py" />
         <option value="$PROJECT_DIR$/restoran/utils.py" />
         <option value="$PROJECT_DIR$/TrOneONeOne/urls.py" />
-        <option value="$PROJECT_DIR$/restoran/views.py" />
         <option value="$PROJECT_DIR$/templates/restoran/form.html" />
+        <option value="$PROJECT_DIR$/restoran/views.py" />
       </list>
     </option>
   </component>
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509389702937</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create django form post method">
+      <created>1509471626868</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1509471626868</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -300,7 +307,8 @@
     <MESSAGE value="added signals to data model" />
     <MESSAGE value="adding URL SLUG" />
     <MESSAGE value="create simple post form" />
-    <option name="LAST_COMMIT_MESSAGE" value="create simple post form" />
+    <MESSAGE value="create django form post method" />
+    <option name="LAST_COMMIT_MESSAGE" value="create django form post method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -562,21 +570,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restoran/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/restoran/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/restoran/form.html">
+    <entry file="file://$PROJECT_DIR$/restoran/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

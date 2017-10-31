@@ -6,18 +6,20 @@ from .models import Restorant
 from .forms import RestoranCreateForm
 from django.http import HttpResponse, HttpResponseRedirect
 
+
 def restoran_createview(request):
-    if request.POST:
-        form = RestoranCreateForm(request.POST)
-        if form.is_valid():
-            obj = Restorant.objects.create(
-                name=form.cleaned_data.get('name'),
-                location=form.cleaned_data.get('location'),
-                category=form.cleaned_data.get('category')
-            )
+    form = RestoranCreateForm(request.POST or None)
+    if form.is_valid():
+        obj = Restorant.objects.create(
+            name=form.cleaned_data.get('name'),
+            location=form.cleaned_data.get('location'),
+            category=form.cleaned_data.get('category')
+        )
         return HttpResponseRedirect('/restoran/')
+    if form.errors:
+        print(form.errors)
     template_name = 'restoran/form.html'
-    context = {}
+    context = {'form': form}
     return render(request, template_name, context)
 
 
