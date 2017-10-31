@@ -4,9 +4,18 @@ from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Restorant
 from .forms import RestoranCreateForm
-
+from django.http import HttpResponse, HttpResponseRedirect
 
 def restoran_createview(request):
+    if request.POST:
+        form = RestoranCreateForm(request.POST)
+        if form.is_valid():
+            obj = Restorant.objects.create(
+                name=form.cleaned_data.get('name'),
+                location=form.cleaned_data.get('location'),
+                category=form.cleaned_data.get('category')
+            )
+        return HttpResponseRedirect('/restoran/')
     template_name = 'restoran/form.html'
     context = {}
     return render(request, template_name, context)
