@@ -1,26 +1,38 @@
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.views import View
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
 from .models import Restorant
-from .forms import RestoranCreateForm
+from .forms import RestoranCreateForm, RestoranCreateFromTwo
 from django.http import HttpResponse, HttpResponseRedirect
 
 
 def restoran_createview(request):
-    form = RestoranCreateForm(request.POST or None)
+    form = RestoranCreateFromTwo(request.POST or None)
     if form.is_valid():
-        obj = Restorant.objects.create(
-            name=form.cleaned_data.get('name'),
-            location=form.cleaned_data.get('location'),
-            category=form.cleaned_data.get('category')
-        )
+        form.save()
         return HttpResponseRedirect('/restoran/')
     if form.errors:
         print(form.errors)
     template_name = 'restoran/form.html'
     context = {'form': form}
     return render(request, template_name, context)
+
+
+# def restoran_createview(request):
+#     form = RestoranCreateForm(request.POST or None)
+#     if form.is_valid():
+#         obj = Restorant.objects.create(
+#             name=form.cleaned_data.get('name'),
+#             location=form.cleaned_data.get('location'),
+#             category=form.cleaned_data.get('category')
+#         )
+#         return HttpResponseRedirect('/restoran/')
+#     if form.errors:
+#         print(form.errors)
+#     template_name = 'restoran/form.html'
+#     context = {'form': form}
+#     return render(request, template_name, context)
 
 
 class DetailRestoranListView(DetailView):
@@ -106,3 +118,8 @@ class ContactTemplateView(TemplateView):
         }
         # print(context)
         return context
+
+class RestoranCreateView(CreateView):
+    form_class = RestoranCreateFromTwo
+    template_name = 'restoran/form.html'
+    success_url = '/restoran/'
