@@ -17,5 +17,6 @@ LOCATION = ['Spb', 'Moscow']
 
 
 def valid_location(value):
+    # cat = value.capitalize()
     if value in LOCATION:
         raise ValidationError('no')

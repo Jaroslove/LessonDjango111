@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e06bcfdd-8520-4ee3-a5d9-cfafb7e87469" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restoran/validation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restoran/forms.py" afterPath="$PROJECT_DIR$/restoran/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restoran/views.py" afterPath="$PROJECT_DIR$/restoran/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restoran/validation.py" afterPath="$PROJECT_DIR$/restoran/validation.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,17 +49,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="validation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restoran/validation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="360">
+              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restoran/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -119,9 +118,9 @@
         <option value="$PROJECT_DIR$/restoran/utils.py" />
         <option value="$PROJECT_DIR$/templates/restoran/form.html" />
         <option value="$PROJECT_DIR$/TrOneONeOne/urls.py" />
-        <option value="$PROJECT_DIR$/restoran/validation.py" />
         <option value="$PROJECT_DIR$/restoran/views.py" />
         <option value="$PROJECT_DIR$/restoran/forms.py" />
+        <option value="$PROJECT_DIR$/restoran/validation.py" />
       </list>
     </option>
   </component>
@@ -289,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509561198005</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="create valid form">
+      <created>1509642706758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1509642706758</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -331,7 +337,8 @@
     <MESSAGE value="create django form post method" />
     <MESSAGE value="change details" />
     <MESSAGE value="form create view added" />
-    <option name="LAST_COMMIT_MESSAGE" value="form create view added" />
+    <MESSAGE value="create valid form" />
+    <option name="LAST_COMMIT_MESSAGE" value="create valid form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,16 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restoran/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restoran/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -702,14 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restoran/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restoran/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -727,6 +716,24 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restoran/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restoran/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
