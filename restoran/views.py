@@ -7,6 +7,7 @@ from .forms import RestoranCreateForm, RestoranCreateFromTwo
 from django.http import HttpResponse, HttpResponseRedirect
 
 
+
 def restoran_createview(request):
     form = RestoranCreateFromTwo(request.POST or None)
     if form.is_valid():
@@ -118,6 +119,7 @@ class ContactTemplateView(TemplateView):
         }
         # print(context)
         return context
+
 
 class RestoranCreateView(CreateView):
     form_class = RestoranCreateFromTwo
