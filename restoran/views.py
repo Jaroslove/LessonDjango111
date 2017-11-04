@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.views import View
@@ -7,6 +9,7 @@ from .forms import RestoranCreateForm, RestoranCreateFromTwo
 from django.http import HttpResponse, HttpResponseRedirect
 
 
+@login_required()
 def restoran_createview(request):
     form = RestoranCreateFromTwo(request.POST or None)
     if form.is_valid():
@@ -123,7 +126,14 @@ class ContactTemplateView(TemplateView):
         return context
 
 
-class RestoranCreateView(CreateView):
+class RestoranCreateView(LoginRequiredMixin, CreateView):
     form_class = RestoranCreateFromTwo
+    login_url = '/login/'
     template_name = 'restoran/form.html'
     success_url = '/restoran/'
+
+    def form_valid(self, form):
+        instance = form.save(commit=False)
+        instance.owner = self.request.user
+        # instance.save()
+        return super(RestoranCreateView, self).form_valid(form)
