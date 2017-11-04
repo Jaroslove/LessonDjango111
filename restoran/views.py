@@ -7,12 +7,14 @@ from .forms import RestoranCreateForm, RestoranCreateFromTwo
 from django.http import HttpResponse, HttpResponseRedirect
 
 
-
 def restoran_createview(request):
     form = RestoranCreateFromTwo(request.POST or None)
     if form.is_valid():
-        form.save()
-        return HttpResponseRedirect('/restoran/')
+        if request.user.is_authenticated():
+            instance = form.save(commit=False)
+            instance.owner = request.user
+            instance.save()
+            return HttpResponseRedirect('/restoran/')
     if form.errors:
         print(form.errors)
     template_name = 'restoran/form.html'
