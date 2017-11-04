@@ -4,7 +4,8 @@
     {% for item in object_list %}
         <ul>
             <il>
-                <a href="/restoran/{{ item.slug }}/"></a><br/>
+                {#                <a href="{% url 'restoran_details' slug=item.slug %}"></a><br/>#}
+                <a href="{{ item.get_absolute_url }}"></a><br/>
                 {{ item.location }} </br>
                 {{ item.update }}
             </il>

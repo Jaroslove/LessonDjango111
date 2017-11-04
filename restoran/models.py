@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.signals import pre_save, post_save
 from .utils import unique_slag_generator
 from    django.conf import settings
+from    django.core.urlresolvers import reverse
 
 User = settings.AUTH_USER_MODEL
 
@@ -17,6 +18,9 @@ class Restorant(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('details_restoran', kwargs={'slug': self.slug})
 
     @property
     def title(self):
