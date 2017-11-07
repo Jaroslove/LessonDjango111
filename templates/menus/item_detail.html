@@ -1,0 +1,14 @@
+{% extends 'restoran/base.html' %}
+{% block main %}
+    <h5>{{ object.name }}</h5>
+    <ul>
+        <il>
+            Contenst
+            <ul>
+                {% for of in object.get_contents %}
+                    <li>{{ of }}</li>
+                {% endfor %}
+            </ul>
+        </il>
+    </ul>
+{% endblock %}

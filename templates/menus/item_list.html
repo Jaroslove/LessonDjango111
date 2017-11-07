@@ -1,0 +1,17 @@
+{% extends 'restoran/base.html' %}
+{% block main %}
+    <h5>Menu items</h5>
+    {% for item in object_list %}
+        <ul>
+            <il>
+                <a href="{{ item.get_absolute_url }}">{{ item.name }}</a><br/>
+                Contenst
+                <ul>
+                    {% for of in item.get_contents %}
+                        <li>{{ of }}</li>
+                    {% endfor %}
+                </ul>
+            </il>
+        </ul>
+    {% endfor %}
+{% endblock %}

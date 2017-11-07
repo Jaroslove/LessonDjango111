@@ -6,6 +6,7 @@ from django.contrib.auth.views import LoginView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^restoran/', include('restoran.urls')),
+    url(r'^items/', include('menus.urls')),
     # url(r'^restoran/$', views.RestoranListView.as_view(), name='restoran'),
     # url(r'^restoran/create/$', views.RestoranCreateView.as_view(), name='create_restoran'),
     # url(r'^restoran/create/$', views.restoran_createview),

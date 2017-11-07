@@ -129,7 +129,7 @@ class ContactTemplateView(TemplateView):
 class RestoranCreateView(LoginRequiredMixin, CreateView):
     form_class = RestoranCreateFromTwo
     login_url = '/login/'
-    template_name = 'restoran/form.html'
+    template_name = 'form.html'
     success_url = '/restoran/'
 
     def form_valid(self, form):
@@ -137,3 +137,8 @@ class RestoranCreateView(LoginRequiredMixin, CreateView):
         instance.owner = self.request.user
         # instance.save()
         return super(RestoranCreateView, self).form_valid(form)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(RestoranCreateView, self).get_context_data(*args, **kwargs)
+        context['title'] = 'Add restoran'
+        return context
